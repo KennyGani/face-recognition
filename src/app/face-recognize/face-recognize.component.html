@@ -1,0 +1,15 @@
+<app-menu></app-menu>
+<div class="video-container">
+    <video
+        #video
+        [width]="videoWidth"
+        [height]="videoHeight"
+        controls
+        muted
+    ></video>
+    <div #canvas></div>
+    <div class="text-super-large background-green">{{ recognizedName }}</div>
+    <div class="text-large">
+        Minimum accuracy level<input class="big-input" #distanceThreshold />
+    </div>
+</div>

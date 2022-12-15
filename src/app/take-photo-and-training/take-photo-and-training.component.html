@@ -1,0 +1,43 @@
+<app-menu></app-menu>
+<div class="video-container">
+    <video #video id="video" [width]="WIDTH" [height]="HEIGHT" autoplay></video>
+    <canvas #canvas id="canvas" [width]="WIDTH" [height]="HEIGHT"></canvas>
+</div>
+<br />
+<div class="text-large">{{ progressPercentage }} %</div>
+<br />
+
+<div class="snap-container">
+    <button
+        class="btn btn-primary text-large big-button"
+        (click)="captureImage()"
+    >
+        Capture Image
+    </button>
+
+    <button
+        class="btn btn-primary text-large big-button"
+        (click)="downloadJson()"
+    >
+        Download Data
+    </button>
+</div>
+<br />
+
+<div class="snap-container">
+    <button
+        class="btn btn-primary text-large big-button"
+        (click)="captureImageTrainAndDownload()"
+    >
+        Capture And Download Data
+    </button>
+</div>
+<br />
+
+<div class="text-large">
+    photo counter<br /><input class="big-input" #totalPhoto />
+</div>
+<br />
+<div class="text-large">name<br /><input class="big-input" #nameInput /></div>
+<br />
+<br />
